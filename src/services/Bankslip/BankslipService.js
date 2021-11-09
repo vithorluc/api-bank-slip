@@ -44,12 +44,12 @@ const validateBankslip = async (code) => {
         case "DIGITABLE_LINE":
           result.barCode = lineTypeble2CodeBar(code);
           result.expirationDate = identifyDate(code, "DIGITABLE_LINE");
-          result.amount = identifyValue(code, "DIGITABLE_LINE");
+          result.amount = identifyValue(code, "DIGITABLE_LINE").toFixed(2);
           break;
         case "CODE_BAR":
           result.barCode = code;
           result.expirationDate = identifyDate(code, "CODE_BAR");
-          result.amount = identifyValue(code, "CODE_BAR");
+          result.amount = identifyValue(code, "CODE_BAR").toFixed(2);
           break;
         default:
           break;
