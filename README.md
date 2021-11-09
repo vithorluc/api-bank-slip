@@ -20,7 +20,6 @@ Está api é um teste para validação de códigos de barra digitáveis.
 - dotenv
 - express
 - moment-timezone
-- supertest
 
 ## Funcionamento
 
