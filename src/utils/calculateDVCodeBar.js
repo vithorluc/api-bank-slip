@@ -1,3 +1,5 @@
+import { calculateMod10 } from "./calculateMod10";
+import { calculateMod11 } from "./calculateMod11";
 /**
  * Calculates the check digit of all barcode numbers
  *
@@ -19,9 +21,9 @@ const calculateDVCodeBar = (code, codePosition, mod) => {
   code = code.join("");
 
   if (mod === 10) {
-    return calculaMod10(code);
+    return calculateMod10(code);
   } else if (mod === 11) {
-    return calculaMod11(code);
+    return calculateMod11(code);
   }
 };
 

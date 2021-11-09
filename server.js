@@ -19,6 +19,11 @@ consign({ cwd: "src" })
   .then("routes")
   .into(app);
 
-app.listen(port, () => {
-  console.log(`Server Running on port ${port}`);
-});
+if (process.env.NODE_ENV != 'test') {
+  app.listen(port, () => {
+    console.log(`Server Running on port ${port}`);
+  });
+}
+
+
+export {app}

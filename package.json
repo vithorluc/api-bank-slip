@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "NODE_ENV=test jest --silent --detectOpenHandles",
     "start": "nodemon server.js --ignore __tests__",
     "dev": "nodemon -w server.js --exec \" babel-node server.js --presets env \"",
     "build": "babel src -s -D -d dist --preset env"
@@ -33,7 +33,7 @@
     "cors": "2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "luxon": "^2.1.1",
-    "moment-timezone": "^0.5.33"
+    "moment-timezone": "^0.5.33",
+    "supertest": "^6.1.6"
   }
 }

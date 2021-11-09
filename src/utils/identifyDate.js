@@ -33,9 +33,9 @@ const identifyDate = (code, typeCode) => {
     }
   }
 
-  bankSlipDate.add(Number(factorDate), "days");
+  const date = bankSlipDate.add(Number(factorDate), "days");
 
-  return bankSlipDate.toDate();
+  return bankSlipDate.toDate().toISOString().split("T")[0];
 };
 
 export { identifyDate };

@@ -29,7 +29,7 @@ module.exports = {
   // coveragePathIgnorePatterns: [
   //   "/node_modules/"
   // ],
-
+  //setupFilesAfterEnv: ["./jest.setup.js"],
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
 
