@@ -5,7 +5,7 @@ import { indentifyBankslipType } from "./indentifyBankslipType";
  *
  * -------------
  *
- * @param {string} code Boleto numbering
+ * @param {string} code Bankslip numbering
  *
  * -------------
  *

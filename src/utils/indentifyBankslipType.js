@@ -3,7 +3,7 @@
  *
  * -------------
  *
- * @param {string} code Boleto numbering
+ * @param {string} code Bankslip numbering
  *
  * -------------
  *

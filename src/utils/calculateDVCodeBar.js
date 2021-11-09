@@ -3,7 +3,7 @@
  *
  * -------------
  *
- * @param {string} code Boleto numbering
+ * @param {string} code Bankslip numbering
  * @param {int} codePosition Position where the check digit should be found
  * @param {int} mod Module 10 or Module 11
  *

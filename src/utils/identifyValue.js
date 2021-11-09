@@ -6,8 +6,8 @@ import { substringReplace } from "./substringReplace";
  *
  * -------------
  *
- * @param {string} code Boleto numbering
- * @param {string} typeCode type of code inserted (CODIGO_DE_BARRAS / LINHA_DIGITAVEL)
+ * @param {string} code Bankslip numbering
+ * @param {string} typeCode type of code inserted (CODE_BAR / DIGITABLE_LINE)
  *
  * -------------
  *
@@ -19,7 +19,7 @@ const identifyValue = (code, typeCode) => {
   let bankSlipValue = "";
   let finalValue;
 
-  if (typeCode == "CODIGO_DE_BARRAS") {
+  if (typeCode == "CODE_BAR") {
     if (bankSlipType == "BANCO" || bankSlipType == "CARTAO_DE_CREDITO") {
       bankSlipValue = code.substr(9, 10);
       finalValue =
@@ -33,7 +33,7 @@ const identifyValue = (code, typeCode) => {
     } else {
       finalValue = IdentifyValueCodeBarCollection(code, "code_DE_BARRAS");
     }
-  } else if (typeCode == "LINHA_DIGITAVEL") {
+  } else if (typeCode == "DIGITABLE_LINE") {
     if (bankSlipType == "BANCO" || bankSlipType == "CARTAO_DE_CREDITO") {
       bankSlipValue = code.substr(37);
       finalValue =
@@ -45,7 +45,7 @@ const identifyValue = (code, typeCode) => {
         char = finalValue.substr(1, 1);
       }
     } else {
-      finalValue = IdentifyValueCodeBarCollection(code, "LINHA_DIGITAVEL");
+      finalValue = IdentifyValueCodeBarCollection(code, "DIGITABLE_LINE");
     }
   }
   return parseFloat(finalValue);

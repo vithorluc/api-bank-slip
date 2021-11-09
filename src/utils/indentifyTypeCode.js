@@ -3,7 +3,7 @@
  *
  * ------------
  *
- * @param {string} code Boleto numbering
+ * @param {string} code Bankslip numbering
  *
  * ------------
  *
@@ -16,9 +16,9 @@ const indentifyTypeCode = (code) => {
   code = code.replace(/[^0-9]/g, "");
 
   if (code.length == 44) {
-    return "CODIGO_DE_BARRAS";
+    return "CODE_BAR";
   } else if (code.length == 46 || code.length == 47 || code.length == 48) {
-    return "LINHA_DIGITAVEL";
+    return "DIGITABLE_LINE";
   } else {
     return "TAMANHO_INCORRETO";
   }

@@ -1,21 +1,21 @@
 /**
- * Identifies the boleto reference code to determine which module
+ * Identifies the Bankslip reference code to determine which module
  * will be used to calculate check digits
  *
  * -------------
  *
- * @param {string} code Boleto numbering
+ * @param {string} code Bankslip numbering
  *
  * -------------
  *
  * @return {json} {mod, effective}
  */
-const indentifyReference = (codigo) => {
-  codigo = codigo.replace(/[^0-9]/g, "");
+const indentifyReference = (code) => {
+  code = code.replace(/[^0-9]/g, "");
 
-  const reference = codigo.substr(2, 1);
+  const reference = code.substr(2, 1);
 
-  if (typeof codigo !== "string") throw new TypeError("Insert a valid string!");
+  if (typeof code !== "string") throw new TypeError("Insert a valid string!");
 
   switch (reference) {
     case "6":

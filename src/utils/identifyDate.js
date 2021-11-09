@@ -5,8 +5,8 @@ import moment from "moment-timezone";
  *
  * -------------
  *
- * @param {string} code Boleto numbering
- * @param {string} typeCode type of code inserted (CODIGO_DE_BARRAS / LINHA_DIGITAVEL)
+ * @param {string} code Bankslip numbering
+ * @param {string} typeCode type of code inserted (CODE_BAR / DIGITABLE_LINE)
  *
  * -------------
  *
@@ -19,13 +19,13 @@ const identifyDate = (code, typeCode) => {
   let factorDate = "";
   let bankSlipDate = moment.tz("1997-10-07 20:54:59.000Z", "UTC");
 
-  if (typeCode === "CODIGO_DE_BARRAS") {
+  if (typeCode === "CODE_BAR") {
     if (bankSlipType == "BANCO" || bankSlipType == "CARTAO_DE_CREDITO") {
       factorDate = code.substr(5, 4);
     } else {
       factorDate = "0";
     }
-  } else if (typeCode === "LINHA_DIGITAVEL") {
+  } else if (typeCode === "DIGITABLE_LINE") {
     if (bankSlipType == "BANCO" || bankSlipType == "CARTAO_DE_CREDITO") {
       factorDate = code.substr(33, 4);
     } else {

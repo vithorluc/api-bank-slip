@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js --ignore __tests__",
     "dev": "nodemon -w server.js --exec \" babel-node server.js --presets env \"",
     "build": "babel src -s -D -d dist --preset env"
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/vithorluc/api-bank-slip#readme",
   "devDependencies": {
+    "jest": "^27.3.1",
+    "jest-cli": "^27.3.1",
     "nodemon": "2.0.14"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "cors": "2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "luxon": "^2.1.1",
     "moment-timezone": "^0.5.33"
   }
 }

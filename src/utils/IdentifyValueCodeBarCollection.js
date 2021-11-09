@@ -4,8 +4,8 @@ import { indentifyReference } from "./indentifyReference";
  *
  * -------------
  *
- * @param {string} code Boleto numbering
- * @param {string} typeCode type of code inserted (CODIGO_DE_BARRAS / LINHA_DIGITAVEL)
+ * @param {string} code Bankslip numbering
+ * @param {string} typeCode type of code inserted (CODE_BAR / DIGITABLE_LINE)
  *
  * -------------
  *
@@ -19,13 +19,13 @@ const IdentifyValueCodeBarCollection = (code, typeCode) => {
   let finalValue;
 
   if (isEffectiveValue) {
-    if (typeCode == "LINHA_DIGITAVEL") {
+    if (typeCode == "DIGITABLE_LINE") {
       bankSlipValue = code.substr(4, 14);
       bankSlipValue = code.split("");
       bankSlipValue.splice(11, 1);
       bankSlipValue = bankSlipValue.join("");
       bankSlipValue = bankSlipValue.substr(4, 11);
-    } else if (typeCode == "CODIGO_DE_BARRAS") {
+    } else if (typeCode == "CODE_BAR") {
       bankSlipValue = code.substr(4, 11);
     }
 

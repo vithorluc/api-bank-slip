@@ -10,8 +10,8 @@ const validateCodeWithCv = (code, typeCode) => {
 
   let result;
 
-  if (typeCode === "LINHA_DIGITAVEL") {
-    bankSlipType = indentifyBankslipType(code, "LINHA_DIGITAVEL");
+  if (typeCode === "DIGITABLE_LINE") {
+    bankSlipType = indentifyBankslipType(code, "DIGITABLE_LINE");
 
     if (bankSlipType == "BANCO" || bankSlipType == "CARTAO_DE_CREDITO") {
       const block1 = code.substr(0, 9) + calculateMod10(code.substr(0, 9));
@@ -55,7 +55,7 @@ const validateCodeWithCv = (code, typeCode) => {
 
       result = block1 + block2 + block3 + block4;
     }
-  } else if (typeCode === "CODIGO_DE_BARRAS") {
+  } else if (typeCode === "CODE_BAR") {
     bankSlipType = identificarbankSlipType(code);
 
     if (bankSlipType == "BANCO" || bankSlipType == "CARTAO_DE_CREDITO") {
