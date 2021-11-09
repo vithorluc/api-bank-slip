@@ -4,10 +4,10 @@ Está api é um teste para validação de códigos de barra digitáveis.
 
 ## tecnologias ultilizadas
 
-- node,
-- jasvascript,
-- express,
-- jest (testes unitários),
+- node
+- jasvascript
+- express
+- jest (testes unitários)
 
 ## dependências (apenas para funcionamento da api)
 
@@ -24,9 +24,14 @@ Está api é um teste para validação de códigos de barra digitáveis.
 
 ## Funcionamento
 
+Inicialmente fazer as instalações das dependências necessárias
+
 ```sh
     npm install
 ```
+
+Para ver a API funcionando basta rodar o seguinte comando que usará o babel para transpilar
+em ambiente de desenvolvimento o código
 
 ```sh
     npm run dev
@@ -46,3 +51,14 @@ validação de boletos
 | Rota            | retorno                         |
 | --------------- | ------------------------------- |
 | /bankslip/:code | barCode, expirationDate, amount |
+
+## arquitetura
+
+```sh
+   - src
+        - config
+        - controllers
+        - routes
+        - services
+        - utils
+```
