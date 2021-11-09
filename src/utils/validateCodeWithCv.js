@@ -3,6 +3,7 @@ import { calculateMod10 } from "./calculateMod10";
 import { calculateMod11 } from "./calculateMod11";
 import { indentifyReference } from "./indentifyReference";
 import { calculateDVCodeBar } from "./calculateDVCodeBar";
+//import { indentifyBankslipType } from "./indentifyBankslipType";
 
 const validateCodeWithCv = (code, typeCode) => {
   code = code.replace(/[^0-9]/g, "");
@@ -56,7 +57,7 @@ const validateCodeWithCv = (code, typeCode) => {
       result = block1 + block2 + block3 + block4;
     }
   } else if (typeCode === "CODE_BAR") {
-    bankSlipType = identificarbankSlipType(code);
+    bankSlipType = indentifyBankslipType(code);
 
     if (bankSlipType == "BANCO" || bankSlipType == "CARTAO_DE_CREDITO") {
       const DV = calculateDVCodeBar(code, 4, 11);

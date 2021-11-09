@@ -1,4 +1,6 @@
 import { indentifyReference } from "./indentifyReference";
+import { substringReplace } from "./substringReplace";
+
 /**
  * Identifies the value in the BAR CODE of the 'Collection' type payment slip
  *
