@@ -1,0 +1,38 @@
+{
+  "name": "api-bank-slip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest --silent --detectOpenHandles",
+    "start": "nodemon server.js --ignore __tests__",
+    "dev": "nodemon -w server.js --exec \" babel-node server.js --presets env \"",
+    "build": "babel src -s -D -d dist --preset env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vithorluc/api-bank-slip.git"
+  },
+  "author": "vithor lucas varela oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vithorluc/api-bank-slip/issues"
+  },
+  "homepage": "https://github.com/vithorluc/api-bank-slip#readme",
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "jest-cli": "^27.3.1",
+    "nodemon": "2.0.14"
+  },
+  "dependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "body-parser": "1.19.0",
+    "config": "3.3.6",
+    "consign": "^0.1.6",
+    "cors": "2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "moment-timezone": "^0.5.33"
+  }
+}
