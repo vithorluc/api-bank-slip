@@ -8,7 +8,7 @@ describe("Test Bankslip", () => {
       expect(response).toEqual({
         barCode: "21299758700000020000001121100012100447561740",
         expirationDate: "2018-07-16",
-        amount: 20,
+        amount: "20.00",
       });
       done();
     });
