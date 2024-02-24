@@ -1,15 +1,17 @@
-# api-bank-slip
+---
 
-Está api é um teste para validação de códigos de barra digitáveis.
+# API Bank Slip
 
-## tecnologias ultilizadas
+This API serves as a test for validating bank slip codes.
 
-- node
-- jasvascript
-- express
-- jest (testes unitários)
+## Technologies Used
 
-## dependências (apenas para funcionamento da api)
+- Node.js
+- JavaScript
+- Express.js
+- Jest (for unit testing)
+
+## Dependencies (required for API functionality)
 
 - babel-cli
 - babel-preset-env
@@ -21,43 +23,45 @@ Está api é um teste para validação de códigos de barra digitáveis.
 - express
 - moment-timezone
 
-## Funcionamento
+## Operation
 
-Inicialmente fazer as instalações das dependências necessárias
+Before starting, make sure to install the necessary dependencies:
 
 ```sh
-    npm install
+npm install
 ```
 
-Para ver a API funcionando basta rodar o seguinte comando que usará o babel para transpilar
-em ambiente de desenvolvimento o código
+To start the API in the development environment, use the following command, which will transpile the code using Babel:
 
 ```sh
-    npm run dev
+npm run dev
 ```
 
-## para rodas os testes unitários
+## Unit Testing
+
+To run unit tests, use the following command:
 
 ```sh
-   npm run test
+npm run test
 ```
 
-## rotas
+## Routes
 
-Essa api possui apenas 1 endpoint. Seu funcionamento é unicamente arquitetado para
-validação de boletos
+This API has only one endpoint, exclusively designed for validating bank slips:
 
-| Rota            | retorno                         |
-| --------------- | ------------------------------- |
-| /bankslip/:code | barCode, expirationDate, amount |
+| Route            | Response                            |
+| ---------------- | ----------------------------------- |
+| /bankslip/:code  | barCode, expirationDate, amount     |
 
-## arquitetura
+## Directory Architecture
+
+The project directory structure is organized as follows:
 
 ```sh
-   - src
-        - config
-        - controllers
-        - routes
-        - services
-        - utils
+- src
+    - config          # Project configurations
+    - controllers     # Business logic controllers
+    - routes          # API route definitions
+    - services        # Application services
+    - utils           # Miscellaneous utilities
 ```
